@@ -1,0 +1,12 @@
+{
+  "llmMetrics": {
+    "precision": 0.5,
+    "recall": 1,
+    "f1": 0.6666666666666666
+  },
+  "baselineMetrics": {
+    "precision": 1,
+    "recall": 1,
+    "f1": 1
+  }
+}

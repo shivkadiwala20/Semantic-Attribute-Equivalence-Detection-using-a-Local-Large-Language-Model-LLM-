@@ -1,0 +1,17 @@
+{
+  "groups": [
+    [
+      "firstname",
+      "lastname"
+    ],
+    [
+      "city"
+    ],
+    [
+      "dateofbirth"
+    ],
+    [
+      "zipcode"
+    ]
+  ]
+}
