@@ -35,13 +35,9 @@ Detects semantically equivalent attribute names across CSV/JSON datasets using a
 └─ package-lock.json
 ```
 
-### Pipeline Diagram (Text)
-```
-CSV / JSON ──► Attribute Extractor ──► Prompt Builder ──► Local LLM (Qwen)
-                                        │
-                                        └──► Grouping Logic ──► JSON Groups ──► Evaluation (P/R/F1 vs ground truth)
-Baseline (Levenshtein) ────────────────────────────────────────────────┘
-```
+### Pipeline Diagram 
+<img width="1484" height="2353" alt="image" src="https://github.com/user-attachments/assets/79df7f40-cd1b-4941-ab85-8d8bd4aeadba" />
+
 
 ### Prompt Configurations
 - **Basic**: Minimal instructions (format fragile).
