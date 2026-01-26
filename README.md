@@ -37,7 +37,8 @@ Detects semantically equivalent attribute names across CSV/JSON datasets using a
 
 ### Pipeline Diagram 
 <!-- <img width="1484" height="2353" alt="image" src="https://github.com/user-attachments/assets/79df7f40-cd1b-4941-ab85-8d8bd4aeadba" /> -->
-<img width="7716" height="6560" alt="image" src="https://github.com/user-attachments/assets/3fa45d05-3349-4fb3-94f4-f90db12bf456" />
+<img width="7223" height="7295" alt="ORCH GT EV Pipeline-2026-01-26-211625" src="https://github.com/user-attachments/assets/d37908f7-1c07-44b9-9162-d13738f0c096" />
+
 
 
 
