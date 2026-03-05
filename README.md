@@ -40,11 +40,8 @@ Detects semantically equivalent attribute names across CSV/JSON datasets using a
 ```
 
 ### Pipeline Diagram (Text)
-```
-CSV / JSON ──► Attribute Extractor ──► Prompt Builder ──► Local LLM (Qwen)
-                                        │
-                                        └──► Grouping Logic ──► JSON Groups ──► Evaluation (P/R/F1 vs ground truth)
-Baseline (Levenshtein) ────────────────────────────────────────────────┘
+<img width="8192" height="5759" alt="image" src="https://github.com/user-attachments/assets/d1fcec55-d491-455f-a657-fa7fddce33c3" />
+
 ```
 
 ### Prompt Configurations
