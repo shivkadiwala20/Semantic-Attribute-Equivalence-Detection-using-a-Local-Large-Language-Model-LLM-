@@ -26,6 +26,10 @@ Detects semantically equivalent attribute names across CSV/JSON datasets using a
 │  ├─ extract.js             # CSV header extractor
 │  ├─ normalize.js           # Lowercase + underscore removal
 │  └─ evaluate.js            # Precision/Recall/F1 on grouped pairs
+├─ ui/                       # Web UI for visualizing results
+│  ├─ index.html             # Main UI page
+│  ├─ app.js                 # UI logic
+│  └─ README.md              # UI documentation
 ├─ EXPLANATION.md            # Detailed results explainer
 ├─ QUICK_REFERENCE.md        # Short presentation notes
 ├─ LARGE_DATASET_GUIDE.md    # Full large-dataset guide
@@ -50,10 +54,25 @@ Baseline (Levenshtein) ───────────────────
 - **Chunked variants** (for 50+ attributes): `llm-chunked.js` splits attributes into chunks, merges results.
 
 ### Prerequisites
-- Node 18+
-- Ollama running locally with `qwen3:1.7b` pulled
-  - Start: `ollama serve`
-  - Pull: `ollama pull qwen3:1.7b`
+
+**Required:**
+- Node.js 18+ ([Download](https://nodejs.org/))
+- Ollama installed ([Download](https://ollama.ai))
+- Qwen 3 1.7B model
+
+**Quick Setup:**
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Start Ollama (in separate terminal)
+ollama serve
+
+# 3. Pull Qwen model
+ollama pull qwen3:1.7b
+```
+
+📖 **Detailed setup instructions**: See [`SETUP.md`](SETUP.md)
 
 ### Quick Start (small dataset)
 ```bash
@@ -85,6 +104,27 @@ node src/create-ground-truth.js datasets/large-dataset.csv
 node src/batch-evaluate.js datasets/large-dataset.csv
 ```
 
+### Visualizing Results (Web UI) 🌐
+
+For better understanding, especially with large datasets:
+
+```bash
+# Open the UI in your browser
+open ui/index.html
+# Or navigate to ui/ folder and double-click index.html
+```
+
+Then load your metrics JSON file (e.g., `outputs/metrics.large-dataset.json`)
+
+**Features:**
+- 📈 Interactive charts comparing all methods
+- 🔍 Search and filter large attribute lists  
+- ✅ Visual comparison of correct/incorrect pairs
+- 📋 Side-by-side predicted vs ground truth
+- 🎨 Color-coded results for easy understanding
+
+See `ui/README.md` for details.
+
 ### How Grouping Is Evaluated
 - Groups are converted to pair sets.
 - Precision/Recall/F1 are computed on pair overlap between prediction and ground truth.
@@ -115,3 +155,40 @@ LLM (structured prompt)    | 1.00      | 1.00     | 1.00
 LLM (context-aware prompt) | 1.00      | 0.50     | 0.67
 Baseline (edit distance)   | 1.00      | 0.50     | 0.67
 ```
+
+## 📚 Documentation
+
+- **Setup Guide**: [`SETUP.md`](SETUP.md) - Installation & troubleshooting
+- **Presentation Guide**: [`PRESENTATION_CHECKLIST.md`](PRESENTATION_CHECKLIST.md) - Pre-presentation checklist
+- **Results Explanation**: [`EXPLANATION.md`](EXPLANATION.md) - Understanding evaluation results
+- **Large Dataset Guide**: [`LARGE_DATASET_GUIDE.md`](LARGE_DATASET_GUIDE.md) - Working with large datasets
+- **Analysis**: [`WHY_BASIC_BETTER.md`](WHY_BASIC_BETTER.md) - Understanding unexpected results
+
+## 🚀 Quick Demo
+
+Run the demo script for a complete demonstration:
+
+```bash
+./demo.sh
+```
+
+Or manually:
+```bash
+# 1. Run evaluation
+node src/index.js datasets/sample.csv
+
+# 2. Open UI
+open ui/index.html
+# Load outputs/metrics.sample.json
+```
+
+## 👤 Author
+
+Shiv Kadiwala  
+M.Sc. Web Engineering  
+Technische Universität Chemnitz
+
+**Supervisors:**
+- Prof. Dr. Michael Martin
+- Florian Hahn
+- Sara Todorovikj
