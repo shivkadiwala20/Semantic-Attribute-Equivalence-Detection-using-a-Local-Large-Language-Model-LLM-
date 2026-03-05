@@ -39,10 +39,13 @@ Detects semantically equivalent attribute names across CSV/JSON datasets using a
 └─ package-lock.json
 ```
 
-### Pipeline Diagram (Text)
-<img width="8192" height="5759" alt="image" src="https://github.com/user-attachments/assets/d1fcec55-d491-455f-a657-fa7fddce33c3" />
+### Pipeline Diagram 
+<!-- <img width="1484" height="2353" alt="image" src="https://github.com/user-attachments/assets/79df7f40-cd1b-4941-ab85-8d8bd4aeadba" /> -->
+<img width="8192" height="5759" alt="ORCH GT EV Pipeline-2026-01-27-091012" src="https://github.com/user-attachments/assets/6335e14d-2fc2-4984-8e9c-776c84cfaf17" />
 
-```
+
+
+
 
 ### Prompt Configurations
 - **Basic**: Minimal instructions (format fragile).
