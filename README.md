@@ -156,10 +156,7 @@ Baseline (edit distance)   | 1.00      | 0.50     | 0.67
 ## 📚 Documentation
 
 - **Setup Guide**: [`SETUP.md`](SETUP.md) - Installation & troubleshooting
-- **Presentation Guide**: [`PRESENTATION_CHECKLIST.md`](PRESENTATION_CHECKLIST.md) - Pre-presentation checklist
-- **Results Explanation**: [`EXPLANATION.md`](EXPLANATION.md) - Understanding evaluation results
-- **Large Dataset Guide**: [`LARGE_DATASET_GUIDE.md`](LARGE_DATASET_GUIDE.md) - Working with large datasets
-- **Analysis**: [`WHY_BASIC_BETTER.md`](WHY_BASIC_BETTER.md) - Understanding unexpected results
+
 
 ## 🚀 Quick Demo
 
